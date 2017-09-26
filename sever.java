@@ -32,12 +32,13 @@ public class sever extends JFrame{
      
      
     public sever(){
+        //create form
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(600, 600);
         this.setVisible(true);
         this.setResizable(false);
         this.setLayout(null);
-        this.setTitle("Sever");
+        this.setTitle("Server");
         
         //create form
         txtEnter.setLocation(2,540);
@@ -55,7 +56,7 @@ public class sever extends JFrame{
                 try{
                 String send="";
                 send=txtEnter.getText().trim();//
-                dos.writeUTF(send);
+                dos.writeUTF(send);//dataOutputStream write multithreading
                 }catch(Exception ex){}
                 
                 txtEnter.setText("");
@@ -98,7 +99,7 @@ public class sever extends JFrame{
             dis=new DataInputStream(s.getInputStream());
             dos=new DataOutputStream(s.getOutputStream());
             while(!str.equals("exit")){
-                str=dis.readUTF();
+                str=dis.readUTF();//read multithreading and send to client
                 txtChat.setText(txtChat.getText().trim()+"\n Client: \t"+str);
                 //receive data from client and send form chat
             }
