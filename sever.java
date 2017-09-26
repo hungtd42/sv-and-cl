@@ -56,7 +56,7 @@ public class sever extends JFrame{
                 try{
                 String send="";
                 send=txtEnter.getText().trim();//
-                dos.writeUTF(send);//dataOutputStream write multithreading
+                dos.writeUTF(send);//write and send data format multithreading
                 }catch(Exception ex){}
                 
                 txtEnter.setText("");
@@ -101,7 +101,7 @@ public class sever extends JFrame{
             while(!str.equals("exit")){
                 str=dis.readUTF();//read multithreading and send to client
                 txtChat.setText(txtChat.getText().trim()+"\n Client: \t"+str);
-                //receive data from client and send form chat
+                //receive data from client in txtchat and send form chat
             }
         }catch(Exception e){}
     }
