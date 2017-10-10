@@ -37,7 +37,7 @@ public class Chatbot extends JFrame implements KeyListener{
         {"yes"},
         {"no","NO"},
         //default
-        {"???","I don't understand what you say ??","i don't know?"}
+        {"???","Stop Stop","I don't understand what you say ??","i don't know?"}
         
     };
    public static void main(String[] args) {
@@ -93,11 +93,11 @@ public class Chatbot extends JFrame implements KeyListener{
             while(response==0){
                 if (inArray(quote.toLowerCase(), chat[j*2])) {  //tolowercase chuyen ky tu in hoa khi nhap vao sang chu thuong hợp với dk
                     response=2;
-                    int r=(int)Math.floor(Math.random()*chat[(j*2)+1].length);//r nhan gia tri random {} thu 2
+                    int r=(int)Math.floor(Math.random()*chat[(j*2)+1].length);//r nhan gia tri random {} [][j] thu 2 va length
                     addText("\n Bot: \t"+chat[(j*2)+1][r]);
                 }
                 j++;
-                if (j*2==chat.length-1 && response==0) {//neu k tin thay ky tu khi nhap vao
+                if (j*2==chat.length-1 && response==0) {//neu k tim thay ky tu khi nhap vao
                     response=1;
                 }
             }
