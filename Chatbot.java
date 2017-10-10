@@ -23,21 +23,20 @@ public class Chatbot extends JFrame implements KeyListener{
     
     String [][] chat={
         {"hi","hello","hey"},
-        {"hi","hello"},
+        {"hello","hi"},
         
-        {"how are you","how r you","how r y"},
-        {"good","thank good"},
+        {"how are you","how r you","how r y","h r you","h r yo"},
+        {"good","thank good","thank"},
         
         {"do you want something eat"},
         {"thank ! i have"},
         
-        {"what is you name"},
-        {"my name is bot","people call me Bot"},
+        {"what is your name"},
+        {"my name is bot","people call me Bot","bot"},
         
-        {"yes"},
-        {"no","NO"},
+       
         //default
-        {"???","Stop Stop","I don't understand what you say ??","i don't know?"}
+        {"???","I don't understand what you say ??","i don't know?"}
         
     };
    public static void main(String[] args) {
